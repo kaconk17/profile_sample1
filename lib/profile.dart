@@ -11,7 +11,12 @@ class  ProfileState extends State <Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      appBar: AppBar(title: Text("Belajar Desain Flutter"),),
+      body: Stack(alignment: Alignment.center, children: [
+        Container(
+          color: Colors.blue,
+        ),
+        Container(
         child: Column(children: [
           Container(
       padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -36,7 +41,7 @@ class  ProfileState extends State <Profile> {
       child: Column(children: [
         Text("Hello"),
       Container(
-        height: 200,
+        height: 100,
         width: 200,
         margin: EdgeInsets.all(20),
         decoration: BoxDecoration(
@@ -53,16 +58,25 @@ class  ProfileState extends State <Profile> {
       ]),
        
     ), Container(
+      
       height: 150,
       width: 200,
       padding: EdgeInsets.all(10),
-      child: Row(
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            color: Colors.blueGrey,
+          ),
+          Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
         Text("data"),
         Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Android_logo_2019.png/800px-Android_logo_2019.png", height: 70,width: 70,),
         Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Android_logo_2019.png/800px-Android_logo_2019.png", height: 70, width: 70,)
-      ],),
+      ],)
+        ],
+      ),
     ), Container(
        height: 150,
       width: 300,
@@ -80,6 +94,7 @@ class  ProfileState extends State <Profile> {
         ],),
         
       ),
+      ],)
     );
   }
 }
