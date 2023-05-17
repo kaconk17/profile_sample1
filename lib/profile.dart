@@ -56,11 +56,26 @@ class  ProfileState extends State <Profile> {
       height: 150,
       width: 200,
       padding: EdgeInsets.all(10),
-      child: Row(children: [
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
         Text("data"),
         Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Android_logo_2019.png/800px-Android_logo_2019.png", height: 70,width: 70,),
         Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Android_logo_2019.png/800px-Android_logo_2019.png", height: 70, width: 70,)
       ],),
+    ), Container(
+       height: 150,
+      width: 300,
+      child: GridView.count(
+        crossAxisCount: 2,
+        children: <Widget>[
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+        ],),
     )
         ],),
         
