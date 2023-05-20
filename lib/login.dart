@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'transfer.dart';
 
 class Frmlogin extends StatefulWidget {
   const Frmlogin({super.key});
@@ -97,7 +98,11 @@ class _FrmloginState extends State<Frmlogin> {
                           ),
                       ),),
                       
-                      OutlinedButton(onPressed: null,
+                      OutlinedButton(onPressed: (){
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+                          return TransferPage();
+                      }));},
                       
                       style: OutlinedButton.styleFrom(
                         shape: StadiumBorder(),
