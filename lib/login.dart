@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +23,7 @@ class _FrmloginState extends State<Frmlogin> {
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
               colors: <Color>[
-                Colors.white,
+                Color.fromARGB(255, 150, 199, 250),
                 Colors.blue
               ]
             )
@@ -94,11 +96,49 @@ class _FrmloginState extends State<Frmlogin> {
                           
                           ),
                       ),),
-                      ElevatedButton(onPressed: null,
                       
-                      style: ElevatedButton.styleFrom(onSurface: Colors.blue, onPrimary: Colors.white),
-                      child: Text("GO!",style: TextStyle(fontSize: 30),)),
+                      OutlinedButton(onPressed: null,
                       
+                      style: OutlinedButton.styleFrom(
+                        shape: StadiumBorder(),
+                        padding: EdgeInsets.zero
+                        
+                       // fixedSize: Size(400, 60)
+                      ),
+                      child: Ink(
+                        //width: 500,
+                        //height: 60,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              
+                              colors: <Color>[
+                                Color.fromARGB(255, 150, 199, 250),
+                                Colors.blue
+                              ]
+                            ),
+                            borderRadius: BorderRadius.circular(40)
+                          ),
+                          child: Container(
+                            width: 400,
+                            height: 60,
+                            alignment: Alignment.center,
+                            child: const Text("GO!", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
+                          ),
+                      )
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(top: 40),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Not a Registered Member ? "),
+                            Text("Sign Up",style: TextStyle(fontSize: 20, color: Colors.blue),)
+                          ],
+                        ),
+                      )
                     ]),
                   )
                 ],),
