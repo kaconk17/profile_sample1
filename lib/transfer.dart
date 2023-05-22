@@ -16,7 +16,7 @@ class _TransferPageState extends State<TransferPage> {
         title: Text("TRANSFER"),
         centerTitle: true,
         actions: <Widget>[
-          IconButton( icon: new Icon(Icons.search,color: Colors.black,), onPressed: () {  },)
+          IconButton( icon: new Icon(Icons.more_horiz,color: Colors.black,), onPressed: () {  },)
         ],
       ),
       body: Stack(
@@ -72,7 +72,8 @@ class _TransferPageState extends State<TransferPage> {
                       leading: Container(
                         height: 50,
                         width: 80,
-                        child: Icon(Icons.credit_card,size: 50,),
+                        //child: Icon(Icons.credit_card,size: 50,),
+                        child: Image.network("https://money.imgix.net/uswitch-assets-eu/amp/images/product/credit-cards/Barclaycard_platinum_2022.png"),
                       ),
                       title: Text("Silver Card",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
                       subtitle: Text("2453 **** **** 8798", style: TextStyle(color: Colors.white),),
